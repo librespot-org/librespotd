@@ -1,0 +1,20 @@
+[package]
+name = "librespotd"
+version = "0.1.0"
+authors = ["Sasha Hilton <sashahilton00@gmail.com>"]
+
+[[bin]]
+name = "librespotd"
+path = "src/main.rs"
+doc = false
+
+[dependencies]
+env_logger = "0.4.0"
+futures = "0.1.8"
+getopts = "0.2.14"
+hyper = "0.11.2"
+librespot = { git = "https://github.com/librespot-org/librespot" }
+log = "0.3.5"
+tokio-core = "0.1.2"
+tokio-io = "0.1"
+tokio-signal = "0.1.2"
