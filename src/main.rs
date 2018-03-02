@@ -352,7 +352,8 @@ impl Main {
             let config = task.connect_config.clone();
             let device_id = task.session_config.device_id.clone();
 
-            task.discovery = Some(discovery(&handle, config, device_id, setup.zeroconf_port).unwrap());
+            task.discovery =
+                Some(discovery(&handle, config, device_id, setup.zeroconf_port).unwrap());
         }
 
         if let Some(credentials) = setup.credentials {
@@ -385,7 +386,9 @@ impl Future for Main {
         loop {
             let mut progress = false;
 
-            if let Some(Async::Ready(Some(creds))) = self.discovery.as_mut().map(|d| d.poll().unwrap()) {
+            if let Some(Async::Ready(Some(creds))) =
+                self.discovery.as_mut().map(|d| d.poll().unwrap())
+            {
                 if let Some(ref spirc) = self.spirc {
                     spirc.shutdown();
                 }
