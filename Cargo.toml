@@ -13,8 +13,13 @@ env_logger = "0.4.0"
 futures = "0.1.8"
 getopts = "0.2.14"
 hyper = "0.11.2"
-librespot = { git = "https://github.com/librespot-org/librespot" }
+librespot = { git = "https://github.com/librespot-org/librespot", rev="8f8eb8c" }
 log = "0.3.5"
+rpassword = "0.3.0"
+rust-crypto = "0.2.36"
 tokio-core = "0.1.2"
 tokio-io = "0.1"
 tokio-signal = "0.1.2"
+
+[replace]
+"rust-crypto:0.2.36" = { git = "https://github.com/awmath/rust-crypto.git", branch = "avx2" }
