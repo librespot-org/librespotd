@@ -1,4 +1,4 @@
-#Librespot Daemon (librespotd)
+# Librespot Daemon (librespotd)
 
 This will eventually become the easy to use, bells-and-whistles daemon that uses librespot to provide it's functionality.
 
